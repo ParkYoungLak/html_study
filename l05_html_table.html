@@ -10,12 +10,56 @@
       //border:1px solid black;  //table 외부의 테두리선만 의미.
     }
 
-    /*#testTable > tbody > tr > td : 실제위  */
+    /*#testTable > tbody > tr > td : 실제위치  */
     #testTable, #testTable td, #testTable th {
+
       border: 1px blue;
       border-style: dotted;
       border-collapse: collapse;  //separate 가 기본설정
+
     }
+    #testTable th{
+      background-color: brown;
+    }
+
+    #tableStudy, #tableStudy tr,#tableStudy td{
+
+      border: 3px solid blue;
+      border-collapse: collapse;
+      padding: 10px;
+      text-align: center;
+    }
+    #tableStudy th{
+      background-color: lightblue;
+    }
+    #tableStudy tr:nth-child(even){
+      background-color: lightgrey;
+    }
+    #tableStudy tr:nth-child(odd){
+      background-color: lightgreen;
+    }
+    #tableStudy tbody tr:hover{
+      background-color: grey;
+    }
+/* hover 는 마우스가 지나가는 이벤트 상태를 선택한다.  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </style>
 </head>
 
@@ -76,6 +120,66 @@
       </tr>
     </tbody>
   </table>
+  <table id="tableStudy">
+    <caption><h2>테이블과 관련된 태그들</h2></caption>
+    <thead>
+      <tr>
+        <th>태그이름(tag)</th>
+        <th>정의(description)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>table</td>
+        <td>데이터를 행과 열로 정리하는 표</td>
+      </tr>
+      <tr>
+        <td>tr</td>
+        <td>테이블의 행</td>
+      </tr>
+      <tr>
+        <td>td</td>
+        <td>데이터 셀로 왼쪽 정렬이 된다.</td>
+      </tr>
+      <tr>
+        <td>th</td>
+        <td>헤더 셀로 중앙 정렬되고 bold 속성을 가진다.</td>
+      </tr>
+      <tr>
+        <td>caption</td>
+        <td>테이블의 제목</td>
+      </tr>
+      <tr>
+        <td>colgroup</td>
+        <td>셀 전체의 스타일을 지정할 때 사용한다.</td>
+      </tr>
+      <tr>
+        <td>col</td>
+        <td>group 의 셓을 지정할 수 있다.</td>
+      </tr>
+      <tr>
+        <td>thead</td>
+        <td>테이블을 구획할때 사용되며 헤더 셀에 많이 사용된다.</td>
+      </tr>
+      <tr>
+        <td>tbody</td>
+        <td>테이블의 데이터가 출력되는 곳</td>
+      </tr>
+      <tr>
+        <td>tfoot</td>
+        <td>합계와 같은 테이블의 마지막을 구획할 떄 사</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+
+
+
+
+
 
 </body>
 
