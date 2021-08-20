@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML table</title>
+  <style>
+    #testTable {
+      width: 100%;
+      //border:1px solid black;  //table 외부의 테두리선만 의미.
+    }
+
+    /*#testTable > tbody > tr > td : 실제위  */
+    #testTable, #testTable td, #testTable th {
+      border: 1px blue;
+      border-style: dotted;
+      border-collapse: collapse;  //separate 가 기본설정
+    }
+  </style>
+</head>
+
+<body>
+  <h1>HTML table</h1>
+  <table style="width:100%" border="3">
+    <caption>
+      <h2>기본 테이블</h2>
+    </caption>
+    <tr>
+      <th>이름</th>
+      <th>나이</th>
+      <th>성별</th>
+    </tr>
+    <tr>
+      <td>길동</td>
+      <td>100</td>
+      <td>남</td>
+    </tr>
+    <tr>
+      <td>하니</td>
+      <td>50</td>
+      <td>여</td>
+    </tr>
+    <tr>
+      <td>철수</td>
+      <td>70</td>
+      <td>남</td>
+    </tr>
+  </table>
+  <!-- id = html document 의 유일한 선택자. 중복 불가능. -->
+  <table id="testTable">
+    <caption>
+      <h2>시멘틱 테이블(thead, tbody, tfoot)</h2>
+    </caption>
+    <thead>
+    <tbody>
+      <tr>
+        <th>이름</th>
+        <th>나이</th>
+        <th>성별</th>
+      </tr>
+      </thead>
+      <tr>
+        <td>길동</td>
+        <td>100</td>
+        <td>남</td>
+      </tr>
+      <tr>
+        <td>하니</td>
+        <td>50</td>
+        <td>여</td>
+      </tr>
+      <tr>
+        <td>철수</td>
+        <td>70</td>
+        <td>남</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+
+</html>
