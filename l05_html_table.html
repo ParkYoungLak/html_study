@@ -7,7 +7,8 @@
   <style>
     #testTable {
       width: 100%;
-      //border:1px solid black;  //table 외부의 테두리선만 의미.
+      /*border:1px solid black;  //table 외부의 테두리선만 의미.*/
+      text-align: center;
     }
 
     /*#testTable > tbody > tr > td : 실제위치  */
@@ -17,26 +18,30 @@
       border-style: dotted;
       border-collapse: collapse;  //separate 가 기본설정
 
+
     }
     #testTable th{
+      color:grey;
       background-color: brown;
     }
 
     #tableStudy, #tableStudy tr,#tableStudy td{
 
-      border: 3px solid blue;
+      border-top: 3px solid blue;
       border-collapse: collapse;
       padding: 10px;
       text-align: center;
     }
     #tableStudy th{
-      background-color: lightblue;
+      color: darkblue;
+      background-color: darkgrey;
+      padding: 10px;
     }
     #tableStudy tr:nth-child(even){
       background-color: lightgrey;
     }
     #tableStudy tr:nth-child(odd){
-      background-color: lightgreen;
+      background-color: beige;
     }
     #tableStudy tbody tr:hover{
       background-color: grey;
