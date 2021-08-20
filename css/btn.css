@@ -1,0 +1,22 @@
+.btn{
+  background-color: lightblue;
+  color: grey;
+  font-weight: 800;
+  font-size: 30px;
+  padding: 15px 29px;
+  /* padding: (top,bottom) (left,right); */
+  border: 1px solid white;
+  border-radius: 10px;
+}
+.btn:hover{
+  background-color: #212529
+}
+.danger{
+  background-color: darkred;
+}
+.danger:hover{
+  background-color: #a21424;
+}
+.info{
+  background-color: lightgreen;
+}
