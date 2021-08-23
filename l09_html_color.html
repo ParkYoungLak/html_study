@@ -5,15 +5,18 @@
   <meta charset="utf-8">
   <title>html color</title>
   <style>
-    #colorBoxContainer{
+    #colorBoxContainer {
+      width: 90%%;
       display: flex;
       flex-direction: row;
       background-color: grey;
     }
-    .box{
+
+    .box {
       float: left;
       width: 100px;
       height: 100px;
+      border: 1px solid black;
       margin: 10px;
     }
   </style>
@@ -43,7 +46,7 @@
         <div class="box" style="background-color:rgb(255,255,255);">하양</div>
       </div>
       <hr>
-      <div id="colorBoxContainer">
+      <div id="hexBoxContainer">
         <div class="box" style="background-color:rgb(255,0,0);">빨강</div>
         <div class="box" style="background-color:rgb(255,127,0);">주황</div>
         <div class="box" style="background-color:rgb(0,0,255);">파랑</div>
@@ -60,23 +63,19 @@
         //console.log(boxes);
         /*
         for(let box of colorboxes){
-          box.onclick=function(){
-            alert(this.style.backgroundColor)
-          }
+        box.onclick=function(){
+        alert(this.style.backgroundColor)
+        }
         }
         */
         for(let box of boxes){
-          box.onclick=function(){
-            alert(this.style.backgroundColor)
-          }
+        box.onclick=function(){
+        alert(this.style.backgroundColor)
+        }
         }
 
 
-      </script>
-
-
-
-
+        </script>
 
 
 
