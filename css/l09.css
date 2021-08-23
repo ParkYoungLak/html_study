@@ -1,0 +1,21 @@
+
+.box_contain {
+  width: 90%%;
+
+  flex-direction: row;
+  background-color: grey;
+}
+
+.box {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid;
+  /* border 의 color는 color를 따라간다.*/
+  text-align: center;
+  line-height: 100px;
+}
+.box:hover{
+  opacity: .5;
+}
