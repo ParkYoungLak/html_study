@@ -1,0 +1,19 @@
+/*
+테이블 customize
+*/
+
+#table01{
+  width:100%;
+  text-align: left;
+  border-collapse: collapse;
+  margin: 20 auto;
+}
+
+#table01 td, #table01 th{
+  border: 1px solid rgb(50,50,50);
+  padding: 10px;
+}
+/*클래스 지정하면 이렇게 써보자. */
+.table01.table01_center{
+  text-align: center;
+}
