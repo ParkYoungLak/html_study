@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Window (BOM)</title>
+</head>
+
+<body>
+  <main>
+    <h1>Window(BOM)객체는 브라우저에서 열린 찬</h1>
+    <h2>새창 띄우기</h2>
+    <ul>
+      <li>window.open(url, name, specs, replace) : 새 브라우저 or 새 창을 연다.
+        <button type="button" onclick="openwindow()">windowOpen test</button>
+      </li>
+      <li>windowObject.resizeBy(width, height) : 창의 크기를 현재 크기보다 더 크게 조절한다.
+        <button type="button" onclick="testwindowResizeBy()">windowResizeBy(600,600)</button>
+      </li>
+      <li>windowObject.resizeTo(width, height) : 창의 크기를 지정된 너비와 높이로 조정한다.
+        <button type="button" onclick="testwindowResizeTo()">windowResizeTo(600,600)</button>
+      </li>
+      <li>test : 입력받은 크기로 testwindow 크기 조정
+        <form name="windowResize" action="index.html" method="post">
+          <br>가로 : <input type="text" name="winWidth" value="500">
+          <br>세로 : <input type="text" name="winHeight" value="600">
+          <br> <button type="button" onclick="testResize()" name="button">변경</button>
+        </form>
+
+      </li>
+      <li>moveBy(x,y) : 현재 위치를 기준으로 창을 이동</li>
+      <li>moveTo(x,y) : 창을 지정 위치로 이동</li>
+      <li>test : 입력받은 크기로 testwindow 크기 조정
+        <form name="winMove" action="index.html" method="post">
+          <br>x : <input type="text" name="moveX" value="500">
+          <br>y : <input type="text" name="moveY" value="600">
+          <br> <button type="button" onclick="moveTest(winMove.moveX.value, winMove.moveY.value)" name="button">변경</button>
+        </form>
+
+      </li>
+    </ul>
+    <h2>함수를 주기적으로 호출하기</h2>
+    <ul>
+      <li>setInterval(function,milliseconds) : 함수를 지정 간격으로 호출한다.</li>
+      <li>clearInterval(intervalObject) : 인터벌 함수의 타이머를 초기화</li>
+      <li><button type="button" onclick="setInt()">1초마다 숫자증가</button>++num : <span id="intervalNum">0</span>
+      <button type="button" onclick="clrInt()">stop</button>
+      </li>
+      <script>
+        var interNumDom = document.getElementById("intervalNum");
+        var num = 0;
+        let stopInt
+        function incrNum(){
+          interNumDom.innerText= ++num;
+        }
+
+        function setInt(){
+          stopInt = setInterval(incrNum,1000);
+        }
+        function clrInt(){
+          window.clearInterval(stopInt)
+        }
+
+
+      </script>
+    </ul>
+
+
+
+  </main>
+  <script>
+    var testwindow; //testwindowObject 참조.
+/*
+    function moveTest(mX,mY){
+      testwindow.moveTo(mX,mY)
+    }
+*/
+    function openwindow() {
+      testwindow = window.open("", "test", "width=200,height=200")
+      // 가로세로 크기는 하나의 따옴표안에 묶어준다.
+
+    }
+
+    function testwindowResizeBy() {
+      testwindow.resizeBy(600, 600);
+    }
+
+    function testwindowResizeTo() {
+      testwindow.resizeTo(600, 600);
+    }
+
+    function testResize() {
+      //form name 은 id와 동일하다.
+      //document.forms.formname = document.getElementById('formName')
+      //form 안에 input의 name은 해당 form 안에서만 유일.
+      //document.forms = document.getElementsByTagName('form')
+      //document.forms.formName.inputName = document.getElementById('inputName'
+      let winWidth = document.forms.windowResize.winWidth.value;
+      let winHeight = document.forms.windowResize.winHeight.value;
+
+      testwindow.resizeTo(winWidth, winHeight);
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+</html>
