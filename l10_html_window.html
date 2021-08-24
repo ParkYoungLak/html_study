@@ -46,6 +46,22 @@
       <li><button type="button" onclick="setInt()">1초마다 숫자증가</button>++num : <span id="intervalNum">0</span>
       <button type="button" onclick="clrInt()">stop</button>
       </li>
+      <h2>함수를 특정 시간에 호출</h2>
+      <ul>
+     <li>setTimeout(function,milliseconds) : 지정된 시간 (밀리초)에 함수를 한번 호출함</li>
+     <li>clearTimeOut(timeObject)</li> "지정된 시간에 함수를 호출하기 전에 멈추는 함수 "
+     <li><button type="button" onclick="setTimeout(function(){alert('안녕하세요')},2000)">2초뒤 경고</button></li>
+      </ul>
+      <li>시간 :<button type="button" onclick="ts()"></button><b id="interClock"></b></li>
+      <script>
+        function timestart(){
+         document.getElementById("interClock").innerText= new Date().toLocaleTimeString();
+      }
+       function ts(){
+         setInterval(timestart,1000)
+       }
+
+      </script>
       <script>
         var interNumDom = document.getElementById("intervalNum");
         var num = 0;
