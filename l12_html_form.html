@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>html form</title>
+</head>
+
+<body>
+  <main>
+    <h1>html 제출양식 form</h1>
+    <p>html 양식은 사용자 입력을 수집하기 위해 사용된다. 예) 설문조사,회원가입,로그인...등</p>
+    <p>양식(form)에 입력한 복수의 데이터(파라미터)는 처리를 위해 서버로 전송(method: post)된다.</p>
+    <article>
+      <h2>form 태스</h2>
+      <p>form 요소는 사용자 입력을 위한 html 양식을 만드는데 사용되며 입력방식을 1개 이상 포함하는 컨테이너이다.
+        <br>이 떄 입력 양식에는 text field, checkboxes, radio, submit...이 있다.
+        <br>form 과 입력 요소는 모두 name 을 가지고 이 name이 파라미터 이름으로 서버에 전송된다. 예) url?name=value&name2=value2
+        <br>document.forms["formName"]["inputName"]로 element를 참조할 수 있기 때문에 formName을 아이디처럼 유일한 값이다.
+        (==document.forms.formName.inputName.value)
+      </p>
+      <h3>form 태그 속성</h3>
+      <ul>
+        <li>action : 양식을 제출하는 url 위치</li>
+        <li>method : 양식 데이터를 보낼 때 통신(http)한 방법
+          <ul>
+            <li>method="GET"(default) : url에 파라미터를 이름/값 쌍을 추가하는 방법으로 파라미터가 안전하지 않다.
+              예)url?name=value&name=value </li>
+            <li>method="POST" : 양식 파라미터를 서버에 보낼 떄 HTTP 포스트 트랜잭션에 추가해서 보낸다.
+              (파라미터가 안전하다.)</li>
+        </li>
+      </ul>
+      <li>name : html 문서에서 유일한 이름이어야 한다.</li>
+      <li>autocomplete : 입력 양식의 자동완성(autocomplete="on|off")</li>
+      <li>novalidate : 양식 제출 시 유효성 검사를 하지 않도록 지정.</li>
+      <li>target : 양식 제출시 받은 응답을 표시할 창의 위치(양식을 서버에 제출하면 양식을 처리 후 이동할 페이지를 반환).
+        <br>예) 양식을 서버에 제출하면 처리한 상태에 따라 이동할(응답)페이지가 다르다. (로그인실패->로그인, 성공->홈)
+        <ul>
+          <li>_self(default) : 동일한 프레임(창)에 표시.</li>
+          <li>_blank : 새창이나 프레임에 표시</li>
+          <li>_parent : 상위 프레임에 표시</li>
+          <li>_top : 창 전체에 표,</li>
+        </ul>
+      </li>
+      <li>enctype : 양식 데이터를 서버에 제출할 떄 인코딩 방식을 지정(GET-url 인코딩이 고정,POST만 변경 가능.)</li>
+      </ul>
+    </article>
+    <article>
+      <h2>입력 양식 요소</h2>
+      <p>input 은 입력양식요소의 대표이며 요러 type 의 값을 전달할 수 있다.
+        <br>모든 입력양식요소는 name과 value를 가지며 양식을 제출(submit)할 떄, url or post transaction에 추가된다.
+      </p>
+      <ul>
+        <li>input : 다양한 입력 타입이 존재하는 입력요소
+          <input type="datetime-local" name="" value="">
+        </li>
+        <li>textarea : 여러 줄의 텍스트 영역 제공
+          <textarea name="name" rows="2" cols="80">hello</textarea>
+        </li>
+        <li>select : 드롭다운 목록(optgroup: 목록을 다시 그룹으로 정의)
+          <select class="" name="">
+            <optgroup label="frontend">
+              <option value="html">html</option>
+              <option value="css">css</option>
+              <option value="js">Javascript</option>
+            </optgroup>
+            <optgroup label="backend">
+              <option value="java">JAVA</option>
+              <option value="c">C</option>
+              <option value="c#">C#</option>
+            </optgroup>
+          </select>
+        </li>
+        <li>datalist : 입력하기 전에 미리 정의된 옵션 목록을 지정.
+          <input list="program">
+          <datalist id="program">
+            <option value="java">JAVA</option>
+            <option value="c">C</option>
+            <option value="c#">C#</option>
+          </datalist>
+        </li>
+        <li>button : 클릭이 가능한 버튼 <button type="button" name="button">버튼</button></li>
+        <li>label : 입력 요소에 라벨을 정의(입력요소.id === label.for or label>입력요소)
+          <label for="testcheck">test:</label> <input type="checkbox" name="test" id="testcheck" value="0">
+          <label>test2: <input type="checkbox" name="test2" value="1"></label>
+        </li>
+
+      </ul>
+    </article>
+    <article>
+      <h2>input 태그가 가지는 여러 타입의 입력요소</h2>
+      <ul>
+        <li>type="text" : 한줄 텍스트를 정의 <input type="text" name="" value=""></li>
+        <li>type="search" : 검색 문자열을 입력하기 위한 필드
+          <input type="search" name="" value="">
+        </li>
+        <li>type="email" : 이메일을 입력하는 필드 (제출시 유효성검사)<form><input type="email" name="" value="">
+            <input type="submit" name="" value="제출">
+          </form>
+        </li>
+        <li>type="url" : url을 입력하는 필드(제출시 유효성검사)
+          <form>
+            <input type="url" name="" value="">
+            <input type="submit" name="" value="제출">
+          </form>
+        </li>
+        <li>type="password" : 입력한 문자를 암호화시킨다.
+          <input type="password" name="" value="">
+        </li>
+        <li>type="number" : 숫자를 입력하는 필드
+          <input type="number" name="" value="" step="2">
+        </li>
+        <li>type="button" : 클릭이 가능한 버튼(자바스크립트로 정의함)</li>
+        <li>type="submit" : action 정의된 페이지(서버)로 형식을 제출.</li>
+        <li>type="reset" : value를 재설정하는 버튼(reset 실행)</li>
+        <li>type="range" : 범위를 제어하는 컨트롤 ui 제공
+          <input type="range" name="" value="70" max="100" min="10" step="10">
+        </li>
+        <li>type="checkbox" : 선택한 파라미터만 전달
+          <label><input type="checkbox" name="checkTest1" value="para1">체크박스1</label>
+          <label><input type="checkbox" name="checkTest2" value="para2">체크박스2</label>
+          <label><input type="checkbox" name="checkTest3" value="para3">체크박스3</label>
+        </li>
+        <li>type="radio" : 같은 이름의 파라미터가 복수의 value중 하나만 선택해서 전
+          <label><input type="radio" name="radioTest" value="1">라디오1</label>
+          <label><input type="radio" name="radioTest" value="2">라디오2</label>
+          <label><input type="radio" name="radioTest" value="3">라디오3</label>
+        </li>
+        <li>type="color" : 색상 선택가능
+<input type="color" name="" value="">
+        </li>
+        <li>type="datetime-local" : 데이트픽커 UI value ="2021-08-21T17:06"</li>
+        <li>type="date" : value="2021-08-21"</li>
+        <li>type="month" : value="2021-08"</li>
+        <li>type="week" : value="2021-w34"</li>
+        <!-- 1년중 몇번째 주인 -->
+        <li>type="time" : value="hh:mm"</li>
+        <li>type="file" : 파일 업로드 (탐색기 제공)<input type="file" name="" value=""></li>
+        <li>type="hidden" : 숨겨진 파라미터ar</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </article>
+    <article>
+      <h2>form 양식 선택자 test</h2>
+      <p>리스트에서 수정버튼을 누르면 리스트의 회원정보를 회원수정 form 양식에 가져오기</p>
+      <form name="memberInsert" action="" method="post">
+<fieldset>
+  <label>회원수정 form</label>
+  <p>num: <input type="text" name="num" value="01" readonly></p>
+  <p>id: <input type="text" name="id" value="id_aaaa" readonly></p>
+  <p>grade: <input type="number" name="grade" value="0" max="5" readonly></p>
+  <p>gender:
+    <label>female<input type="radio" name="gender" value="f" readonly></label>
+    <label>male<input type="radio" name="gender" value="m" readonly></label>
+  </p>
+  <p>실적: <input type="number" name="score" value="1" readonly></p>
+  <p>
+  <input type="reset" name="" value="재설정">
+  <input type="button" name="" value="회원수p">
+  </p>
+</fieldset>
+      </form>
+      <h3>회원리스트</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>num</th>
+            <th>id</th>
+            <th>tel</th>
+            <th>grade(0~5)</th>
+            <th>gender(M,F)</th>
+            <th>실적(0~100)</th>
+            <th>수정</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td>id_aaa</td>
+            <td>01011111111</td>
+            <td>0</td>
+            <td>f</td>
+            <td>50</td>
+            <td><button type="button" name="button">수정</button></td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>id_</td>
+            <td>010</td>
+            <td>0</td>
+            <td>f</td>
+            <td>50</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td>id_</td>
+            <td>010</td>
+            <td>0</td>
+            <td>f</td>
+            <td>50</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>04</td>
+            <td>id_</td>
+            <td>010</td>
+            <td>0</td>
+            <td>f</td>
+            <td>50</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>05</td>
+            <td>id_</td>
+            <td>010</td>
+            <td>0</td>
+            <td>f</td>
+            <td>50</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </main>
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+</html>
