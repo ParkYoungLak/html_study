@@ -177,7 +177,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr id="id_aaa">
             <td>01</td>
             <td>id_aaa</td>
             <td>01011111111</td>
@@ -186,19 +186,37 @@
             <td>50</td>
             <td><button type="button" name="button">수정</button></td>
           </tr>
-          <tr>
-            <td>02</td>
-            <td>id_</td>
-            <td>010</td>
-            <td>0</td>
-            <td>f</td>
-            <td>50</td>
-            <td></td>
+          <tr id="id_bbb">
+            <td class="num">02</td>
+            <td class="id">id_bbb</td>
+            <td class="tel">01022222222</td>
+            <td class="grade">0</td>
+            <td class="gender">m</td>
+            <td class="score">50</td>
+            <td>
+              <button type="button" name="button" onclick="insertForm('id_bbb')">수정</button>
+            </td>
           </tr>
-          <tr>
+          <script>
+
+
+              var numVal = trForm.num.value
+              var idVal = trForm.num.value
+              var genderVal = trForm.num.value
+              var scoreVal = trForm.num.value
+              var telVal = trForm.num.value
+              var gradeVal = trForm.num.value
+
+              var memInsertForm = document.forms.memberInsert
+
+
+
+            }
+          </script>
+          <tr id="id_ccc">
             <td>03</td>
-            <td>id_</td>
-            <td>010</td>
+            <td>id_ccc</td>
+            <td>01033333333</td>
             <td>0</td>
             <td>f</td>
             <td>50</td>
@@ -206,8 +224,8 @@
           </tr>
           <tr>
             <td>04</td>
-            <td>id_</td>
-            <td>010</td>
+            <td>id_dddddw</td>
+            <td>01044444444</td>
             <td>0</td>
             <td>f</td>
             <td>50</td>

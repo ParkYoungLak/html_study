@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      #hoverTest:hover{
+        color: red;
+      }
+      :target{
+        border: 1px solid blue;
+      }
+      :focus{
+        background-color: yellow;
+      }
+      :in-range{
+        background-color: green;
+      }
+      :out-of-range{
+        background-color: red;
+      }
+      :disabled{
+        border-color: red;
+        opasity:.2;
+      }
+      :enabled{
+        border-color: blue;
+      }
+      :read-only{
+        border-color: yellow;
+      }
+      :checked{
+        width: 20px;
+        height: 20px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>form 연습하기</h1>
+      <h2>의사 클래스(pseudo classes)</h2>
+      <p>요소의 상태를 표시한다.</p>
+      <h3>1.동적 의사 클래스(dynamic pseudo-classes) </h3>
+      <ul>
+        <li id="hoverTest">:hover : 마우스 커버가 요소 위에 올라가 있는 상태.(a 태그에 손가락 포인(a))</li>
+        <li><a href="#">:link - 방문하지 않은 상태(a태그에 파란색)</a></li>
+        <li><a href="">:visited - 연결된 페이지에 방문한 상태(a태그에 보라a)</a></li>
+        <li><a href="#">:active -  활성된 상태, 클릭하고 있는 상태(a태그에 마우스다운 빨강색)</a></li>
+        <li><a href="#hoverTest">:target - 현재 활성화된 모든 요소(href="css선택자")</a></li>
+      </ul>
+      <h3>2.입력 요소 상태 의사 클래스([form] UI element state pseudo-classes)</h3>
+<ul>
+  <li>:focus - 초점이 맞춰진 input 요소 <input type="text"></li>
+  <li>:in-range - value가 범위 내의 값이면 (type="number" min,max)
+    <input type="number" value="8" min="5" max="10"></li>
+  <li>:out-of-range - value가 범위 밖의 값이면 (type="number" min,max)
+  <input type="number" value="15" min="5" max="10"></li>
+  <li>:disabled - 입력 요소에 disabled가 있는 상태(데이터가 서버로 전달되지 않는다.)
+  <input type="text" disabled>
+  </li>
+  <li>:enabled - 사용할 수 있는 요:
+  <input type="text" enabled></li>
+  <li>:read-only - readonly가 있는 수정불가 입력요소
+  <input type="text" readonly value="수정할 수 없는 데이터"></li>
+  <li>:read-write - readonly가 없는 입력요소</li>
+  <li>:required - required 속성을 가지는 input 요소를 모두 선택함.</li>
+  <li>:optional - required 속성을 가지지 않는 input 요소를 모두 선택함</li>
+  <li>:valid - 유효한 값을 가지는 input 요소를 모두 선택함.</li>
+  <li>:invalid - 유효하지 않은 값을 가지는 input 요소를 모두 선택함.</li>
+  <li>:checked - 체크된(checked) 상태의 input 요소를 모두 선택함(option selected).
+<label>test  <input type="radio">   </label>
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+    </main>
+  </body>
+</html>
