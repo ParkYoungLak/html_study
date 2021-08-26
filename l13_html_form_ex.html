@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <style media="screen">
-      #hoverTest:hover{
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style media="screen">
+    /*  #hoverTest:hover{
         color: red;
       }
       :target{
@@ -30,48 +31,173 @@
         border-color: yellow;
       }
       :checked{
-        width: 20px;
-        height: 20px;
+        width: 50px;
+        height: 50px;
       }
+*/
+  </style>
+</head>
 
-    </style>
-  </head>
-  <body>
-    <main>
-      <h1>form 연습하기</h1>
-      <h2>의사 클래스(pseudo classes)</h2>
-      <p>요소의 상태를 표시한다.</p>
-      <h3>1.동적 의사 클래스(dynamic pseudo-classes) </h3>
-      <ul>
-        <li id="hoverTest">:hover : 마우스 커버가 요소 위에 올라가 있는 상태.(a 태그에 손가락 포인(a))</li>
-        <li><a href="#">:link - 방문하지 않은 상태(a태그에 파란색)</a></li>
-        <li><a href="">:visited - 연결된 페이지에 방문한 상태(a태그에 보라a)</a></li>
-        <li><a href="#">:active -  활성된 상태, 클릭하고 있는 상태(a태그에 마우스다운 빨강색)</a></li>
-        <li><a href="#hoverTest">:target - 현재 활성화된 모든 요소(href="css선택자")</a></li>
-      </ul>
-      <h3>2.입력 요소 상태 의사 클래스([form] UI element state pseudo-classes)</h3>
-<ul>
-  <li>:focus - 초점이 맞춰진 input 요소 <input type="text"></li>
-  <li>:in-range - value가 범위 내의 값이면 (type="number" min,max)
-    <input type="number" value="8" min="5" max="10"></li>
-  <li>:out-of-range - value가 범위 밖의 값이면 (type="number" min,max)
-  <input type="number" value="15" min="5" max="10"></li>
-  <li>:disabled - 입력 요소에 disabled가 있는 상태(데이터가 서버로 전달되지 않는다.)
-  <input type="text" disabled>
-  </li>
-  <li>:enabled - 사용할 수 있는 요:
-  <input type="text" enabled></li>
-  <li>:read-only - readonly가 있는 수정불가 입력요소
-  <input type="text" readonly value="수정할 수 없는 데이터"></li>
-  <li>:read-write - readonly가 없는 입력요소</li>
-  <li>:required - required 속성을 가지는 input 요소를 모두 선택함.</li>
-  <li>:optional - required 속성을 가지지 않는 input 요소를 모두 선택함</li>
-  <li>:valid - 유효한 값을 가지는 input 요소를 모두 선택함.</li>
-  <li>:invalid - 유효하지 않은 값을 가지는 input 요소를 모두 선택함.</li>
-  <li>:checked - 체크된(checked) 상태의 input 요소를 모두 선택함(option selected).
-<label>test  <input type="radio">   </label>
-  </li>
-</ul>
+<body>
+  <main>
+    <h1>form 연습하기</h1>
+    <h2>의사 클래스(pseudo classes)</h2>
+    <p>요소의 상태를 표시한다.</p>
+    <h3>1.동적 의사 클래스(dynamic pseudo-classes) </h3>
+    <ul>
+      <li id="hoverTest">:hover : 마우스 커버가 요소 위에 올라가 있는 상태.(a 태그에 손가락 포인(a))</li>
+      <li><a href="#">:link - 방문하지 않은 상태(a태그에 파란색)</a></li>
+      <li><a href="">:visited - 연결된 페이지에 방문한 상태(a태그에 보라a)</a></li>
+      <li><a href="#">:active - 활성된 상태, 클릭하고 있는 상태(a태그에 마우스다운 빨강색)</a></li>
+      <li><a href="#hoverTest">:target - 현재 활성화된 모든 요소(href="css선택자")</a></li>
+    </ul>
+    <h3>2.입력 요소 상태 의사 클래스([form] UI element state pseudo-classes)</h3>
+    <ul>
+      <li>:focus - 초점이 맞춰진 input 요소 <input type="text"></li>
+      <li>:in-range - value가 범위 내의 값이면 (type="number" min,max)
+        <input type="number" value="8" min="5" max="10">
+      </li>
+      <li>:out-of-range - value가 범위 밖의 값이면 (type="number" min,max)
+        <input type="number" value="15" min="5" max="10">
+      </li>
+      <li>:disabled - 입력 요소에 disabled가 있는 상태(데이터가 서버로 전달되지 않는다.)
+        <input type="text" disabled>
+      </li>
+      <li>:enabled - 사용할 수 있는 요:
+        <input type="text" enabled>
+      </li>
+      <li>:read-only - readonly가 있는 수정불가 입력요소
+        <input type="text" readonly value="수정할 수 없는 데이터">
+      </li>
+      <li>:read-write - readonly가 없는 입력요소</li>
+      <li>:required - required 속성을 가지는 input 요소를 모두 선택함.</li>
+      <li>:optional - required 속성을 가지지 않는 input 요소를 모두 선택함</li>
+      <li>:valid - 유효한 값을 가지는 input 요소를 모두 선택함.</li>
+      <li>:invalid - 유효하지 않은 값을 가지는 input 요소를 모두 선택함.</li>
+      <li>:checked - 체크된(checked) 상태의 input 요소를 모두 선택함(option selected).
+        <label>test <input type="radio"> </label>
+      </li>
+    </ul>
+    <h2>입력요소 연습</h2>
+    <p>select 요소는 option라는 선택 속성이 있다.
+      <br>options==(document.querySelectorAll("select option"))
+      <br>options.selectedIndex == 선택되 옵션의 index를 반환
+      <br>options[index].text == innerText
+    </p>
+    <p>
+      <label for="">알파벳 선택;
+        <select name="eee" onchange="handleChange(this)">
+          <option value="A">a</option>
+          <option value="B">b</option>
+          <option value="C">c</option>
+          <option value="D">d</option>
+          <option value="E">e</option>
+        </select>
+      </label>
+      <span>선택된 옵션(순서,value,text):</span>
+      <b id="selectedOnption"> </b>
+    </p>
+    <script>
+      function handleChange(e) {
+        var value = e.value
+        console.log(e.value);
+        document.getElementById('selectedOnption').innerText =
+          (e.selectedIndex + 1) + " " + value + " " + e.options[e.selectedIndex].text
+      }
+    </script>
+    <p>select multiple 시 여러 옵션을 선택해서 서버에 보낼 수 있다.
+      <br>선택된 여러 옵션을 일반적인 방법으로 알 수가 없다.(선택된 옵션 중 첫번쨰만 반환.)
+      <br>:checked 사용하면 선택된 복수의 옵션을 확인할 수 있다.
+    </p>
+    <p>
+      <label>
+        멀티옵션 선택 :
+        <form class="" action="index.html" method="POST">
+          <!-- file:///Users/admin/Documents/html_study/index.html?button=
+server : HTTPRequest(요청.getParameters("selectMulti")=["B","C","D"])
+POST : 서버 요청시 헤더에 메타정보로 form data를 추가할 수 있다.
+-->
+
+          <select name="selectMulti" onchange="multiTest(this)" multiple>
+            <option value="A">a</option>
+            <option value="B">b</option>
+            <option value="C">c</option>
+            <option value="D">d</option>
+            <option value="E">e</option>
+            <option value="F">f</option>
+          </select>
+          <button type="submit" name="button">제출</button>
+      </label>
+      </form>
+      <strong> 제출된 데이터를 확인하세요.([{index: 0, value: 'A', text: 'a'}])</strong>
+      <br><span id="multipleOptionText"></span>
+    </p>
+    <script>
+      function multiTest(selectObject) {
+        //([{index: 0, value: 'A', text: 'a'}])
+
+        var printText = '';
+        var chekedOptions = selectObject.querySelectorAll(':checked');
+        var i = 0
+        console.log(chekedOptions);
+
+        printText += "["
+        for (var op of chekedOptions) {
+          printText += "{";
+          printText += "index:" + op.index + ",";
+          printText += "value:" + op.value + ",";
+          printText += "text:" + op.text;
+          printText += "}";
+          if (++i != chekedOptions.length) {
+            printText += ",";
+          }
+        }
+        console.log(printText)
+
+        printText += "]"
+        document.getElementById('multipleOptionText').innerText = printText;
+      }
+    </script>
+    <h3>checkbox 연습하기</h3>
+    <h4>선택된 박스의 value 확인하기</h4>
+    <p>과제1: selectAll 선택시 모든 checkbox 선택,
+      <br>과제2: 체크박스의 선택이 바뀌면 선택된 항목 출력.
+    </p>
+    <form class="" action="index.html" method="post">
+      <label>
+        체크1:
+        <input type="checkbox" name="test" value="box1" onclick="alert(this.value)">
+      </label>
+      <label>체크2:
+        <input type="checkbox" name="test" value="box2" onchange="alert(this.value)">
+      </label>
+      <label>전체선택:
+        <input id="all" type="checkbox" name="selectAll" value="all" onchange="checkAll(this)">
+      </label>
+      <p id="pText">선택된 항목 test[value, value, ...]:</p>
+    </form>
+    <script>
+      function checkAll(e) {
+        console.log(e)
+        if (document.getElementById('all').checked === true) {
+          /*for(let i=0;i<2;i++){
+          document.getElementsByName('test')[i].checked= true;
+          }
+          */
+          document.getElementsByName('test')[0].checked = true;
+          document.getElementsByName('test')[1].checked = true;
+          //많아지면 반복문
+        }
+        if (document.getElementById('all').checked === false) {
+          document.getElementsByName('test')[0].checked = false;
+          document.getElementsByName('test')[1].checked = false;
+        }
+
+
+      }
+    </script>
+  </main>
+</body>
 
 
 
@@ -80,6 +206,6 @@
 
 
 
-    </main>
-  </body>
+
+
 </html>
