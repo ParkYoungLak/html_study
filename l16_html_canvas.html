@@ -102,6 +102,34 @@
       c3.fillStyle = "rgba(255,110,110,.3)";
       c3.fillRect(75, 75, 150, 150);
     </script>
+    <article>
+      <h2>gradient 번지는 색(기울기색)</h2>
+      <p>createLinearGradient(x0,y0,x1,y1)</p>
+      <ul>
+        <li>x0 : 그래디언트 시작점 x 좌표</li>
+        <li>y0 : 그래디언트 시작점 y 좌표</li>
+        <li>x1 : 그래디언트 끝점 x 좌표</li>
+        <li>y1 : 그래디언트 끝점 y 좌표</li>
+      </ul>
+      <div class="canvas_container">
+        <canvas id="canvas4" width="300" height="300" style="border:1px solid black">
+
+        </canvas>
+      </div>
+    </article>
+    <script>
+      var c4 = document.getElementById("canvas4").getContext("2d");
+      var gradient = c4.createLinearGradient(0,0,200,200);
+      gradient.addColorStop(0,"rgb(50,50,50)");
+      gradient.addColorStop(1,"rgb(200,150,150)");
+      c3.shadowBlur=20;
+      c3.shadowColor="rgb(50,10,50)";
+      c3.shadowOffsetX=10;
+      c3.shadowOffsetY=10;
+      c4.fillStyle= gradient;
+      
+      c4.fillRect(75, 75, 150, 150);
+    </script>
   </main>
 </body>
 
