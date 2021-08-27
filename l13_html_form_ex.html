@@ -178,7 +178,7 @@ POST : 서버 요청시 헤더에 메타정보로 form data를 추가할 수 있
     </form>
     <script>
       function checkAll(e) {
-        console.log(e)
+        //console.log(e)
         if (document.getElementById('all').checked === true) {
           /*for(let i=0;i<2;i++){
           document.getElementsByName('test')[i].checked= true;
@@ -193,6 +193,15 @@ POST : 서버 요청시 헤더에 메타정보로 form data를 추가할 수 있
           document.getElementsByName('test')[1].checked = false;
         }
 
+/*
+1. 체크박스가 다수일 경우, if(event.target.checked ===true)
+ onchange가 발생하는 box 의 Names를 getElementsByName() 으로 불러모오기.
+2. 불러온 calssName들을 변수 ex. Result 에 holding
+3. checked=== true -> value 값 가져와서 innerText = Result; <p>에 reveal
+4. checked=== false -> Result ='';
+5.
+
+*/
 
       }
     </script>

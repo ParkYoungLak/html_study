@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    .iframe_container {
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      margin: 10px 0;
+    }
+  </style>
+  <title></title>
+</head>
+
+<body>
+  <h1 id="hrefSelectorTest">html iframe(inline frame)</h1>
+  <p>iframe 은 다른 웹 페이지를 추가할 수 있다.</p>
+  <div class="iframe_container">
+    <h2>src: 출력될 url, width: 넓이, height: 높이(모든 요소의 스타일 속성은 스타일로 적용가능.)</h2>
+    <iframe src="l02html_basic.html" width="100%" height="100px">
+      출력되지 않을 떄...
+    </iframe>
+
+  </div>
+  <div class="iframe_container">
+    <p>iframe은 스타일이 적용되고 border 바꿀 수 있다.</p>
+    <iframe src="l02html_basic.html" style="width:100%; height:100px; border:none;"></iframe>
+  </div>
+  <div class="iframe_container">
+    <p>iframe name: 은 a 요소의 target으로 저장할 수 있다.
+      (target:_self-현재창에서 이동,_blank-새창에서 이동, iframeName-iframe에서 이동)</p>
+    <iframe src="http://www.hbiedu.co.kr" name="targetTest" width="100%" height="100px" style="border:1px solid blue;"></iframe>
+    <p>target="targetTest" 이동할 페이지는 l04_html_style.html <a href="l04_html_style.html" target="targetTest">이동</a></p>
+    <p>target="_self" 이동할 페이지는 l04_html_style.html <a href="l04_html_style.html" target="_self">이동</a></p>
+    <p>target="_blank "이동할 페이지는 l04_html_style.html <a href="l04_html_style.html" target="_blank">이동</a></p>
+    <p>target="hrefSelectorTest"이동할 페이지는 l04_html_style.html <a href="hrefSelectorTest">이동</a></p>
+  </div>
+</body>
+
+</html>
